@@ -1,0 +1,23 @@
+local set = vim.opt
+
+set.termguicolors = true
+set.background = "dark"
+set.clipboard = "unnamedplus"
+set.cursorline = false
+set.expandtab = true
+set.foldexpr = "nvim_treesitter#foldexpr()"
+set.foldmethod = "manual"
+set.hidden = true
+set.number = true
+set.relativenumber = true
+set.shiftwidth = 2
+set.splitbelow = true
+set.splitright = true
+set.tabstop = 2
+set.title = true
+set.ttimeoutlen = 0
+set.updatetime = 250
+set.wrap = true
+set.linebreak = true
+set.autoread = true
+set.swapfile = false
