@@ -1,9 +1,10 @@
 return {
     'windwp/nvim-autopairs',
     event = "InsertEnter",
+    config = true,
     opts = {
       fast_wrap = {
-        map = '<leader>1',
+        map = '<leader>fw',
         chars = { '{', '[', '(', '"', "'" },
         pattern = [=[[%'%"%>%]%)%}%,]]=],
         end_key = '$',

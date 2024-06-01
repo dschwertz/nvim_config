@@ -1,7 +1,10 @@
 local opts = {
   filters = {
     git_ignored = false,
-  }
+  },
+  -- view = {
+  --   side = "right"
+  -- }
 }
 
 return {

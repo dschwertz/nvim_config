@@ -1,11 +1,12 @@
 local opts = {
-	variant = 'moon'
+  variant = 'moon'
 }
 
 return {
-	{
-		"rose-pine/neovim",
-		name = 'rose-pine',
-		opts = opts
-	},
+  {
+    "rose-pine/neovim",
+    name = 'rose-pine',
+    opts = opts
+  },
 }
+

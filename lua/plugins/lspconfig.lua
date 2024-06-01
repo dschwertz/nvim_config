@@ -10,6 +10,15 @@ local config = function()
   capabilities = vim.tbl_extend("keep", capabilities, lsp_status.capabilities)
   capabilities.textDocument.completion.completionItem.snippetSupport = true
 
+  vim.api.nvim_create_augroup('AutoFormatting', {})
+  vim.api.nvim_create_autocmd('BufWritePre', {
+    pattern = '*.*',
+    group = 'AutoFormatting',
+    callback = function()
+      vim.lsp.buf.format({ async = false })
+    end,
+  })
+
   vim.diagnostic.config({
     -- Disable as we use lsp_lines instead
     virtual_text = false,
@@ -77,9 +86,9 @@ local config = function()
           -- configure plugins in pylsp
           pylsp = {
             plugins = {
-              pyflakes = {enabled = false},
-              pylint = {enabled = false},
-              pycodestyle = {enabled = false},
+              pyflakes = { enabled = false },
+              pylint = { enabled = false },
+              pycodestyle = { enabled = false },
             },
           },
         },
