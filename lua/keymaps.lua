@@ -54,13 +54,26 @@ map('n', '<leader>tclose', '<Cmd>NvimTreeCollapse<Cr>', opts)
 -- map('n', '<C-]>', require("nvim-tree.api").tree.change_root_to_node, opts)
 -- map('n', '<C-[>', require("nvim-tree.api").tree.change_root_to_parent, opts)
 -- trouble
-vim.keymap.set("n", "<leader>xx", function() require("trouble").toggle() end)
-vim.keymap.set("n", "<leader>xg", function() require("trouble").toggle("workspace_diagnostics") end)
-vim.keymap.set("n", "<leader>xh", function() require("trouble").toggle("document_diagnostics") end)
-vim.keymap.set("n", "<leader>xq", function() require("trouble").toggle("quickfix") end)
-vim.keymap.set("n", "<leader>xl", function() require("trouble").toggle("loclist") end)
-vim.keymap.set("n", "gR", function() require("trouble").toggle("lsp_references") end)
+map('n', '<leader>xx', function()
+  require('trouble').toggle()
+end)
+map('n', '<leader>xg', function()
+  require('trouble').toggle 'workspace_diagnostics'
+end)
+map('n', '<leader>xh', function()
+  require('trouble').toggle 'document_diagnostics'
+end)
+map('n', '<leader>xq', function()
+  require('trouble').toggle 'quickfix'
+end)
+map('n', '<leader>xl', function()
+  require('trouble').toggle 'loclist'
+end)
+map('n', 'gR', function()
+  require('trouble').toggle 'lsp_references'
+end)
 -- vim-commentary
 map('n', '<C-/>', '<Plug>CommentaryLine', opts)
 map('v', '<C-/>', '<Plug>Commentary', opts)
-
+-- markdown-preview
+map('n', '<leader>md', '<Plug>MarkdownPreviewToggle', opts)

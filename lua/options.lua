@@ -1,4 +1,3 @@
-
 vim.g.mapleader = ';'
 vim.g.maplocalleader = ';'
 
@@ -61,7 +60,7 @@ vim.o.splitbelow = true
 --  It is very similar to `vim.o` but offers an interface for conveniently interacting with tables.
 --   See `:help lua-options`
 --   and `:help lua-options-guide`
-vim.o.list = true
+vim.o.list = false
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- Preview substitutions live, as you type!
@@ -88,12 +87,12 @@ vim.opt.termguicolors = true
 local set = vim.opt
 
 set.termguicolors = true
-set.background = "dark"
-set.clipboard = "unnamedplus"
+set.background = 'dark'
+set.clipboard = 'unnamedplus'
 set.cursorline = false
 set.expandtab = true
-set.foldexpr = "nvim_treesitter#foldexpr()"
-set.foldmethod = "manual"
+set.foldexpr = 'nvim_treesitter#foldexpr()'
+set.foldmethod = 'manual'
 set.hidden = true
 set.number = true
 set.relativenumber = true
