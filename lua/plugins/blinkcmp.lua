@@ -96,4 +96,3 @@ return { -- Autocompletion
     signature = { enabled = true },
   },
 }
-
